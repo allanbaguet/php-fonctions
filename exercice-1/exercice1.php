@@ -1,8 +1,8 @@
 <?php
-function exercice1() {
+function trueFunction() {
     return true;
 }
-$result = exercice1();
+$result = trueFunction();
 ?>
 <!DOCTYPE html>
 <html lang="fr">

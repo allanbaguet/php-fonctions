@@ -2,23 +2,26 @@
 $age = 25;
 $gender = true;
 // gender true -> Homme / false -> Femme
+// .= sert à la concaténation / $message sert à afficher quelques chose, même si c'est faux
 function exercice7($age, $gender) {
+    $message = '';
     if ($age < 0 || $age > 100) {
-        return 'Entrez un âge valide';
+        $message .= 'Entrez un âge valide';
     } else {
         if ($gender === true) {
             if ($age >= 18) {
-                return 'Vous êtes un homme et vous êtes majeur';
+                $message .= 'Vous êtes un homme et vous êtes majeur';
             } else {
-                return 'Vous êtes un homme et vous êtes mineur';
+                $message .= 'Vous êtes un homme et vous êtes mineur';
             }
         } elseif ($gender === false) {
             if ($age >= 18) {
-                return 'Vous êtes une femme et vous êtes majeure';
+                $message .= 'Vous êtes une femme et vous êtes majeure';
             } else {
-                return 'Vous êtes une femme et vous êtes mineure';
+                $message .= 'Vous êtes une femme et vous êtes mineure';
             }
         }
+        return $message;
     }
 }
 $result = exercice7($age, $gender);

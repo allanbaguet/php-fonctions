@@ -1,12 +1,10 @@
 <?php
-$number1 = 5;
-$number2 = 7;
-$number3 = 50;
-function exercice8($number1, $number2, $number3){
+// valeur par défaut = 10 / = 15 / = 20 -> si variable n'a pas de valeur, prend ces valeurs par défaut à la place
+function exercice8($number1 = 10, $number2 = 15, $number3 = 20){
     $sum = $number1 + $number2 + $number3;
     return $sum;
 }
-$result = exercice8($number1, $number2, $number3);
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -71,7 +69,7 @@ $result = exercice8($number1, $number2, $number3);
     <hr class="border border-4 border-dark">
     <main>
         <div>
-            <p> <?php echo $result ?> </p>
+            <p> <?php echo exercice8() ?> </p>
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
